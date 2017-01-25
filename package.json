@@ -1,0 +1,25 @@
+{
+  "name": "booktools",
+  "version": "1.0.0",
+  "description": "Script Tools for working with Librivox API",
+  "main": "booktools.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ocean"
+  ],
+  "author": "Chad Jones <chadananda@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chadananda/booktools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chadananda/booktools/issues"
+  },
+  "homepage": "https://github.com/chadananda/booktools#readme.md"
+}
