@@ -1,17 +1,21 @@
 ## Book Processing Tools for Importing Librivox Books
 
-### Initial Workflow:
-  1. op: search
-  2. op: listen (if necessary) & rate
-  3. fetch (from Librivox & Gutenberg)  
-  4. !! proofread & manual cleanup of HTML
-  5. align
-  6. proofread
-  7. package (with notes)
-  8. submit (by emailing package zip file)
-  9. inflate (by our editors, fetches and prepares audio)
+### Workflow:
+#### Admin Books selection
+  1. we use `booktools -search` and `booktools -listen` to select booklist
+  2. we send booklist to editor
+
+#### Editor cleanup
+  3. editor uses `booktools -fetch` to download book and audio
+  4. manually proofreads and fixes HTML 
+  4. uses `booktools -align` and `booktools proof` to verify alignment
+  5. uses `booktools -package` to ZIP up books for submission
+
+#### Audio processing and import
+  8. admin uses `booktools -inflate` to prepare audio 
   10. !! audio post-processing (by audio engineer)
-  10. import into library
+  11. admin uses `booktools -publish` to prepare book for publishing, including splitting audio files into AAC m4u
+  10. developer imports book into library
 
 
 ### Command Line Tools
@@ -41,4 +45,9 @@
 
 * booktools > inflate (filename)
   * Inflates packaged ZIP file, fetches 
+
+* booktools > publish (bookname)
+  * locates masterd WAV file and translates it into m4u, splitting into smaller files on space
+
+
 
