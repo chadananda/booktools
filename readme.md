@@ -1,12 +1,17 @@
-## Book Processing Tools for IRLS
+## Book Processing Tools for Importing Librivox Books
 
-### Desired Workflow:
-  1. search
-  2. listen (if necessary) & rate
-  3. fetch (from librivox) or import (from Ocean)
-  4. !! manual cleanup and mastering
+### Initial Workflow:
+  1. op: search
+  2. op: listen (if necessary) & rate
+  3. fetch (from Librivox & Gutenberg)  
+  4. !! proofread & manual cleanup of HTML
   5. align
-  6. proof
+  6. proofread
+  7. package (with notes)
+  8. submit (by emailing package zip file)
+  9. inflate (by our editors, fetches and prepares audio)
+  10. !! audio post-processing (by audio engineer)
+  10. import into library
 
 
 ### Command Line Tools
@@ -24,18 +29,21 @@
   * tries to reformat gutenberg text into Ocn HTML
   * converts audio to 16bit WAV and merges into a single file
   * generates a workflow readme file
-      
-      
-* booktools > import (url)
-  * downloads document in txt or Ocn and reformats as necessry 
-  * tries to locate audio, converts to 16bit WAV and merges into a single file
-  * generates a workflow readme file
  
- 
+
 * booktools > align (title or id)
   * looks for a masterd WAVE file and generates m4u from WAV file (warns if missing)
   * looks for a mster HTML file and creates new alignment file (warns if mastered file missing)  
       
-      
+
 * booktools > proof (title or id)
   * opens book in browser with popcorn aligner  
+
+
+* booktools > package (title or id)
+  * ZIPs up critical files for submission
+
+
+* booktools > inflate (filename)
+  * Inflates packaged ZIP file, fetches 
+
